@@ -1,0 +1,21 @@
+<% include partials/header %>
+
+<div class="container">
+  <div class="row" style="text-align: center;">
+    <h1><%= camp.title %></h1>
+    <hr>
+    <img src="<%= camp.image %>" alt="">
+<br>
+<hr>
+    <div class="thumbnail">
+      <p><%= camp.description %></p>
+    </div>
+    <a class="btn btn-warning" href="/campgrounds/<%= camp._id %>/edit">Edit</a>
+    <form style="display: inline;" action="/campgrounds/<%= camp._id %>?_method=DELETE" method="POST">
+      <button class="btn btn-danger">Delete</button>
+    </form>
+  </div>
+</div>
+
+
+<% include partials/footer %>
